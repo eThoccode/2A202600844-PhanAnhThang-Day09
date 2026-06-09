@@ -1,0 +1,48 @@
+[project]
+name = "day08-rag-pipeline"
+version = "0.1.0"
+description = "Day 08 - RAG pipeline lab (crawling, chunking, retrieval, reranking, generation, evaluation)"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+# Lightweight / API-first stack:
+#   - Embeddings & generation -> Gemini via its OpenAI-compatible endpoint (openai SDK, no extra dep)
+#   - Vector store           -> local numpy store on disk (no Weaviate/Docker)
+#   - Lexical search         -> rank-bm25 (pure Python)
+#   - Reranking              -> Jina API (requests)
+#   - Crawling               -> requests + trafilatura (no headless browser / torch)
+dependencies = [
+    # Core
+    "python-dotenv>=1.0.0",
+    "requests>=2.31.0",
+    "numpy>=1.26.0",
+    # Embeddings + generation (Gemini through OpenAI-compatible API)
+    "openai>=1.30.0",
+    # Task 2 - Crawling (lightweight HTTP + main-content extraction)
+    "trafilatura>=1.8.0",
+    # Task 3 - Document conversion (legacy .doc handled via MS Word COM -> .docx first)
+    "markitdown[docx]>=0.1.0",
+    "pywin32>=306 ; sys_platform == 'win32'",
+    # Task 4 - Chunking
+    "langchain-text-splitters>=0.2.0",
+    # Task 6 - BM25
+    "rank-bm25>=0.2.2",
+    # Task 8 - PageIndex (vectorless RAG)
+    "pageindex>=0.1.0",
+]
+
+[project.optional-dependencies]
+# Group project extras (install with: uv sync --extra group)
+group = [
+    "streamlit>=1.35.0",
+    "deepeval>=1.0.0",
+    "fastapi>=0.110.0",
+    "uvicorn>=0.29.0",
+]
+
+[tool.uv]
+package = false
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+]

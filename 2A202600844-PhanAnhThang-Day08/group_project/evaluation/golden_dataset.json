@@ -1,0 +1,92 @@
+[
+  {
+    "question": "Hình phạt cho tội tàng trữ trái phép chất ma tuý theo Điều 249 Bộ luật Hình sự?",
+    "expected_answer": "Khung 1 của Điều 249 phạt tù từ 1 đến 5 năm, áp dụng cho hành vi tàng trữ không nhằm mục đích mua bán/vận chuyển/sản xuất, ví dụ heroin hoặc cocaine từ 0,1g đến dưới 5g, hoặc các chất khác với khối lượng tương đương.",
+    "expected_context": "Bộ luật Hình sự (Luật 12/2017/QH14), Điều 249"
+  },
+  {
+    "question": "Luật Phòng chống ma tuý 2021 quy định những hình thức cai nghiện nào?",
+    "expected_answer": "Gồm cai nghiện tự nguyện (tại gia đình, cộng đồng hoặc tại cơ sở cai nghiện) và cai nghiện bắt buộc tại cơ sở cai nghiện ma tuý công lập.",
+    "expected_context": "Luật Phòng, chống ma tuý 2021 (Luật 73/2021/QH15), Chương V"
+  },
+  {
+    "question": "Mức hình phạt cao nhất cho tội mua bán trái phép chất ma tuý theo Điều 251 là gì?",
+    "expected_answer": "Khung cao nhất của tội mua bán trái phép chất ma tuý (Điều 251) có thể đến tù 20 năm, tù chung thân hoặc tử hình tuỳ khối lượng và tình tiết.",
+    "expected_context": "Bộ luật Hình sự (Luật 12/2017/QH14), Điều 251"
+  },
+  {
+    "question": "Tội tổ chức sử dụng trái phép chất ma tuý bị xử lý thế nào?",
+    "expected_answer": "Người tổ chức sử dụng trái phép chất ma tuý bị phạt tù, khung cơ bản từ 2 đến 7 năm, và có thể nặng hơn nếu có tình tiết tăng nặng như phạm tội có tổ chức, nhiều lần, với người dưới 16 tuổi.",
+    "expected_context": "Bộ luật Hình sự (Luật 12/2017/QH14), Điều 255"
+  },
+  {
+    "question": "Luật Phòng chống ma tuý hiện hành của Việt Nam là luật số mấy và có hiệu lực khi nào?",
+    "expected_answer": "Là Luật số 73/2021/QH15 (Luật Phòng, chống ma tuý 2021), có hiệu lực thi hành từ ngày 01/01/2022.",
+    "expected_context": "Luật Phòng, chống ma tuý 2021 (Luật 73/2021/QH15)"
+  },
+  {
+    "question": "Nghị định 105/2021/NĐ-CP quy định về nội dung gì?",
+    "expected_answer": "Nghị định 105/2021/NĐ-CP quy định chi tiết và hướng dẫn thi hành một số điều của Luật Phòng, chống ma tuý.",
+    "expected_context": "Nghị định 105/2021/NĐ-CP"
+  },
+  {
+    "question": "Người nghiện ma tuý từ đủ 12 đến dưới 18 tuổi bị áp dụng biện pháp gì?",
+    "expected_answer": "Người nghiện ma tuý từ đủ 12 đến dưới 18 tuổi có thể bị đưa vào cơ sở cai nghiện bắt buộc, nhưng việc này không coi là xử lý vi phạm hành chính.",
+    "expected_context": "Luật Phòng, chống ma tuý 2021 (Luật 73/2021/QH15)"
+  },
+  {
+    "question": "Hành vi trồng cây thuốc phiện, cây cần sa bị xử lý hình sự khi nào?",
+    "expected_answer": "Theo Điều 247, người trồng cây thuốc phiện, cây côca, cây cần sa hoặc cây khác có chứa chất ma tuý bị xử lý hình sự khi đã được giáo dục, đã bị xử phạt vi phạm hành chính hoặc đã bị kết án mà còn vi phạm, với khung cơ bản phạt tù từ 6 tháng đến 3 năm.",
+    "expected_context": "Bộ luật Hình sự (Luật 12/2017/QH14), Điều 247"
+  },
+  {
+    "question": "Cơ quan nào có thẩm quyền ban hành danh mục chất ma tuý và tiền chất?",
+    "expected_answer": "Chính phủ ban hành và sửa đổi, bổ sung danh mục chất ma tuý và tiền chất.",
+    "expected_context": "Luật Phòng, chống ma tuý 2021 (Luật 73/2021/QH15)"
+  },
+  {
+    "question": "Cá nhân, gia đình có trách nhiệm gì trong phòng, chống ma tuý?",
+    "expected_answer": "Cá nhân và gia đình có trách nhiệm tuyên truyền, giáo dục thành viên không vi phạm pháp luật về ma tuý, khai báo người nghiện trong gia đình, và hỗ trợ người nghiện cai nghiện, hoà nhập cộng đồng.",
+    "expected_context": "Luật Phòng, chống ma tuý 2021 (Luật 73/2021/QH15)"
+  },
+  {
+    "question": "Ca sĩ nào bị khởi tố, bắt tạm giam vì tổ chức sử dụng ma tuý vào tháng 5/2026?",
+    "expected_answer": "Ca sĩ Long Nhật và Sơn Ngọc Minh bị khởi tố, bắt tạm giam vì hành vi tổ chức sử dụng trái phép chất ma tuý.",
+    "expected_context": "Bài báo Báo Chính phủ, 2026-05-20"
+  },
+  {
+    "question": "Miu Lê dương tính với bao nhiêu loại ma tuý khi bị bắt?",
+    "expected_answer": "Miu Lê bị bắt quả tang và dương tính cùng lúc với 3 loại ma tuý.",
+    "expected_context": "Bài báo Znews, 2026-05-12"
+  },
+  {
+    "question": "Ca sĩ Chi Dân bị đề nghị truy tố về tội gì và cùng với ai?",
+    "expected_answer": "Ca sĩ Chi Dân bị đề nghị truy tố về tội Tổ chức sử dụng trái phép chất ma tuý, cùng với anh trai là Nguyễn Trung Tín.",
+    "expected_context": "Bài báo VietNamNet, 2025-08-21"
+  },
+  {
+    "question": "Diễn viên hài Trần Hữu Tín bị tuyên mức án bao nhiêu?",
+    "expected_answer": "Trần Hữu Tín (diễn viên hài Hữu Tín) bị tuyên 7 năm 6 tháng tù về tội tổ chức sử dụng trái phép chất ma tuý.",
+    "expected_context": "Bài báo Thanh Niên, 2023-04-28"
+  },
+  {
+    "question": "Trong vụ án của Trần Hữu Tín, DJ Nguyễn Hoàng Phi bị tuyên bao nhiêu năm tù?",
+    "expected_answer": "Nguyễn Hoàng Phi (làm nghề chỉnh nhạc - DJ) bị tuyên 13 năm 6 tháng tù về hai tội tàng trữ và tổ chức sử dụng trái phép chất ma tuý.",
+    "expected_context": "Bài báo Thanh Niên, 2023-04-28"
+  },
+  {
+    "question": "Vụ án liên quan ca sĩ Chi Dân có tổng cộng bao nhiêu bị can bị đề nghị truy tố?",
+    "expected_answer": "Vụ án có tổng cộng 32 bị can bị đề nghị truy tố về các tội mua bán, tàng trữ và tổ chức sử dụng trái phép chất ma tuý.",
+    "expected_context": "Bài báo VietNamNet, 2025-08-21"
+  },
+  {
+    "question": "Long Nhật và Sơn Ngọc Minh bị khởi tố về tội danh nào?",
+    "expected_answer": "Cả hai bị khởi tố về tội tổ chức sử dụng trái phép chất ma tuý.",
+    "expected_context": "Bài báo Báo Chính phủ, 2026-05-20"
+  },
+  {
+    "question": "Châu Việt Cường là ai và liên quan tới vụ việc gì?",
+    "expected_answer": "Châu Việt Cường là một ca sĩ liên quan tới một vụ án ma tuý được báo chí đưa tin.",
+    "expected_context": "Bài báo VietNamNet — vụ án ca sĩ Châu Việt Cường"
+  }
+]

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trợ lý Pháp luật Ma túy — RAG</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js"></script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <div class="app">
+    <!-- Header -->
+    <header class="topbar">
+      <div class="brand">
+        <span class="mark">§</span>
+        <div class="brand-text">
+          <span class="brand-title">Trợ lý Pháp luật Ma túy</span>
+          <span class="brand-sub">Hỏi đáp có dẫn nguồn · Luật &amp; Tin tức Việt Nam</span>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <button class="lib-btn" id="libBtn" title="Tài liệu nguồn">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          <span>Kho tài liệu</span>
+        </button>
+        <div class="status" title="Pipeline">
+          <span class="dot"></span>
+          <span>Gemini · Hybrid RAG</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Conversation -->
+    <main class="chat" id="chat">
+      <section class="hero" id="hero">
+        <p class="hero-eyebrow">Retrieval-Augmented Generation</p>
+        <h1 class="hero-title">Tra cứu pháp luật ma túy,<br /><em>trả lời kèm trích dẫn.</em></h1>
+        <p class="hero-desc">
+          Hệ thống truy hồi từ văn bản luật và các bài báo, sắp xếp lại ngữ cảnh và
+          sinh câu trả lời có citation. Bắt đầu bằng một câu hỏi mẫu:
+        </p>
+        <div class="chips" id="chips">
+          <button class="chip" data-q="Hình phạt cho tội tàng trữ trái phép chất ma túy theo Điều 249 là gì?">
+            Hình phạt tội tàng trữ ma túy (Điều 249)
+          </button>
+          <button class="chip" data-q="Luật Phòng chống ma túy 2021 quy định những hình thức cai nghiện nào?">
+            Các hình thức cai nghiện theo Luật 2021
+          </button>
+          <button class="chip" data-q="Diễn viên hài Trần Hữu Tín bị tuyên mức án bao nhiêu?">
+            Vụ án Trần Hữu Tín
+          </button>
+          <button class="chip" data-q="Ca sĩ nào bị khởi tố vì tổ chức sử dụng ma túy gần đây?">
+            Nghệ sĩ bị khởi tố gần đây
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Composer -->
+    <footer class="composer">
+      <form id="composer" class="composer-inner" autocomplete="off">
+        <textarea id="input" rows="1" placeholder="Nhập câu hỏi của bạn…" enterkeyhint="send"></textarea>
+        <div class="composer-actions">
+          <label class="toggle" title="Bật/tắt reranking (Jina)">
+            <input type="checkbox" id="rerank" checked />
+            <span>Rerank</span>
+          </label>
+          <button type="submit" id="send" class="send" aria-label="Gửi">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+        </div>
+      </form>
+      <p class="composer-hint">Trả lời do AI sinh từ nguồn truy hồi — hãy đối chiếu văn bản gốc khi cần.</p>
+    </footer>
+  </div>
+
+  <!-- Drawer: kho tài liệu nguồn -->
+  <aside class="drawer" id="drawer" hidden>
+    <div class="drawer-backdrop" data-close></div>
+    <div class="drawer-panel" role="dialog" aria-label="Kho tài liệu">
+      <header class="drawer-head">
+        <div>
+          <h2 class="drawer-title">Kho tài liệu</h2>
+          <p class="drawer-sub" id="corpusCount">Nguồn hệ thống đang truy hồi</p>
+        </div>
+        <button class="drawer-close" data-close aria-label="Đóng">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+        </button>
+      </header>
+      <div class="drawer-body" id="corpusBody">
+        <div class="corpus-loading">Đang tải…</div>
+      </div>
+    </div>
+  </aside>
+
+  <script src="/app.js"></script>
+</body>
+</html>
